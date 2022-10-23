@@ -1,0 +1,251 @@
+.sidenav {
+  position: absolute;
+  box-sizing: border-box;
+  background-color:  var(--titleBase);
+  border-top: 1px solid #472957;
+  z-index: 100;
+
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-areas: 
+    "nav-icon about-me . linkedin-icon";
+  grid-template-columns: 80px 2fr 3fr;
+  gap: 40px;
+  align-items: center;
+
+  /* Vertical navigation */
+  width: 100vh;
+  transform-origin: 0 100%;
+  transform: translateY(-100%) rotate(90deg);  
+}
+
+.sidenav .navbar-icon {
+  grid-area: nav-icon;
+  box-sizing: border-box;
+  background-color: #513886;
+  width: 80px;
+  height: 80px;
+}
+
+.sidenav .navbar-icon .navbar-icon__img {
+  max-height: 100%;
+  max-width: 100%;
+  transform: rotate(-90deg);
+}
+
+.sidenav .aboutme-text {
+  grid-area: about-me;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--titleText);
+  text-decoration: none;
+}
+
+.sidenav .aboutme-text:hover {
+  color: #ff934c;
+  transition: all 0.2s;
+}
+
+.sidenav .linkedin-icon {
+  grid-area: linkedin-icon;
+  cursor: pointer;
+  bottom: 0;
+  box-sizing: border-box;
+  width: 80px;
+  height: 80px;
+  padding: 0.9em;
+  transform: rotate(-90deg);
+}
+
+.sidenav--fixed {
+  background-color: rgba(31, 27, 36, 0.3); 
+  border-top: 1px solid #3d3044; 
+  position: fixed;
+}
+
+.title-section {
+  margin-left: 80px;
+  background-color: var(--titleBase);
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.content-grid {
+  flex: 2;
+  margin-left: 30px;
+  width: 100%;
+  gap: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.img-container { 
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  
+  flex: 1;
+  height: 80%;
+  width: 100%;
+  background-color: #513886;
+  border-radius: 40px 0px 0px 40px;
+}
+
+.img-container.hidden {
+  display: none;
+}
+
+.img-container.mobile {
+  display: none;
+  border-radius: 0px 0px 40px 40px; 
+}
+
+.img-container.left {
+  border-radius: 0px 40px 40px 0px;
+}
+
+.img-container > img {
+  min-height:100%; 
+  min-width: 100%; 
+  object-fit: cover;
+}
+
+.type-cursor {
+  color: var(--secondaryText);
+  animation: cursor-blink 1s infinite;
+  animation-timing-function: ease;
+}
+
+@keyframes cursor-blink {
+  0% {
+    opacity: 100%;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+/* Toggle button for dark/light themes */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 140px;
+  height: 65px;
+}
+  
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+  
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--toggle);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 55px;
+  width: 55px;
+  left: 6px;
+  bottom: 5px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+input:checked + .slider {
+  background-color: var(--tagOrange);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(74px);
+  -ms-transform: translateX(74px);
+  transform: translateX(74px);
+}
+
+.slider.round {
+  border-radius: 35px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 480px) {
+
+  html, body {
+    font-size: 2.5vw !important;
+  }
+
+  h4 {
+    font-size: 1.4em !important;
+  }
+
+  .sidenav {
+    transform: none;
+    width: 100vw;
+    grid-template-columns: 80px 2fr 1fr;
+    grid-template-areas: "nav-icon about-me linkedin-icon";
+  }
+
+  .sidenav .aboutme-text {
+    font-size: 17px;
+  }
+
+  .title-section {
+    margin-left: 0;
+    flex-direction: column;
+    padding-top: 80px;
+  }
+
+  .title-section .img-container.mobile {
+    margin: 0 2em;
+    width: 90vw;
+    flex: 4;
+    display: flex;
+  }
+
+  .title-section .img-container.desktop {
+    display: none;
+  }
+
+  .title-section .content-grid {
+    flex: 3;
+    width: 90vw;
+    margin: 0px 2em;
+    padding: 8em 0;
+  }
+
+  .sidenav .navbar-icon .navbar-icon__img {
+    transform: none;
+  }
+
+  .sidenav .linkedin-icon {
+    transform: none;
+    padding: 20px;
+    justify-self: end;
+  }
+  
+}

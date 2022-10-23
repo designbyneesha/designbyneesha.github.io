@@ -1,0 +1,121 @@
+.experience-section {
+    background-color: var(--base);
+    height: 100%;
+    padding: 6em 8em 5em 8em;
+}
+
+.timeline-content {
+    position: relative;
+}
+
+/* Timeline vertical striped bar */
+.timeline-content::after {
+    content: '';
+    position: absolute;
+    border-left: 0.2em dashed rgb(88, 88, 88);
+    top: 8em;
+    bottom: 8em;
+    left: calc(35% - 0.9em);
+}
+
+.timeline-content__scrollbar {
+    content: '';
+    position: absolute;
+    border-left: 0.2em solid var(--tagYellow);
+    top: 8em;
+    bottom: 50%;
+    left: calc(35% - 0.9em);
+    z-index: 100;
+}
+
+.experience-tile {
+    left: 35%;
+    width: 50%;
+    position: relative;
+}
+
+/* Timeline circular progress indicator */
+.experience-tile__bullet {
+    left: -1.5em;
+    content: '';
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    top: calc(50% - 8px);
+    background: var(--base);
+    border: 0.2em solid rgb(88, 88, 88);
+    border-radius: 1em;
+    z-index: 3;
+}
+
+.bullet--active {
+    border-color: var(--tagYellow);
+    background-color: var(--tagYellow);
+}
+
+.experience-tile__date {
+    left: -9em;
+
+    position: absolute;
+    display: inline-block;
+    top: calc(50% - 8px);
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.experience-tile__date.mobile {
+    position: inherit;
+    padding-bottom: 1em;
+    text-align: left;
+    display: none;
+}
+
+.experience-tile__date.desktop {
+    display: block;
+}
+
+.experience-tile__content {
+    padding: 4em 2em;
+}
+
+.experience-hyperlink:hover h3 {
+    color: var(--titleText);
+    transition: all 0.2s;
+}
+
+@media only screen and (max-width: 480px) {
+
+    .experience-section {
+        padding: 8em 2em 0;
+    }
+
+    .section-description {
+        width: auto;
+    }
+
+    .experience-tile {
+        left: 2em;
+        width: 100%;
+    }
+
+    .timeline-content__scrollbar {
+        left: 1.15em;
+    }
+
+    .timeline-content:after {
+        left: 1.15em;
+        bottom: 9em;
+    }
+
+    .experience-tile__content > h4 {
+        font-size: 1.2em !important;
+    }
+
+    .experience-tile__date.mobile {
+        display: block;
+    }
+
+    .experience-tile__date.desktop {
+        display: none;
+    }
+}

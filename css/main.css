@@ -1,0 +1,117 @@
+@import "variables.css";
+@import "title.css";
+@import "projects.css";
+@import "footer.css";
+@import "experience.css";
+@import "projectsection.css";
+
+body {
+    user-select: none;
+    font-family: 'Poppins';
+    background-color: var(--base);
+    font-size: 1.2vw;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 6.3em;
+    color: var(--titleText);
+}
+
+h2 {
+    font-size: 2.9em;
+    color: var(--secondaryText);
+    margin-bottom: 0.3em;
+}
+
+.h2--mobile {
+    font-size: 2.5em;
+}
+
+.h2--section-heading {
+    color: var(--titleText);
+}
+
+h3 {
+    font-size: 1.6em;
+    color: var(--secondaryText);
+}
+
+h4 {
+    font-size: 1.1em;
+    font-weight: 400;
+    line-height: 1.2em;
+    color: var(--secondaryText);
+}
+
+/* Project tile description */
+.h4--subtext {
+    color: var(--subtextLight);
+}
+
+/* Project page body text */
+.h4--description {
+    line-height: 1.4em;
+}
+
+.h4--hyperlink {
+    cursor: pointer;
+    color: var(--titleText);
+    text-decoration: underline;
+}
+
+h5 {
+    font-size: 0.9em;
+    letter-spacing: 0.06em;
+    color: var(--titleText);
+}
+
+/* Timeline tile metadata (COMPANY - LOCATION) */
+.h5--subtext {
+    color: var(--subtextDark);
+    letter-spacing: 0.03em;
+    margin-top: 0.5em;
+    margin-bottom: 0.7em;
+}
+
+.h5--description {
+    color: #5d5d5d;
+    letter-spacing: 0;
+    margin-bottom: 0.7em;
+}
+
+.h5--tag-yellow {
+    color: var(--secondaryText);
+    padding: 0.4em 1em;
+    border: 2px solid var(--tagYellow);
+    background-color: rgba(var(--tagYellow), .075);
+    border-radius: 1.5em;
+}
+
+.h5--tag-orange {
+    color: var(--secondaryText);
+    padding: 0.4em 1em;
+    border: 2px solid var(--tagOrange);
+    background-color: rgba(var(--tagOrange), .075);
+    border-radius: 1.5em;
+}
+
+.h5--tag-blue {
+    color: var(--secondaryText);
+    padding: 0.4em 1em;
+    border: 2px solid var(--tagBlue);
+    background-color: rgba(var(--tagBlue), .075);
+    border-radius: 1.5em;
+}
+
+.h5--tag-green {
+    color: var(--secondaryText);
+    padding: 0.4em 1em;
+    border: 2px solid var(--tagGreen);
+    background-color: rgba(var(--tagBlue), .075);
+    border-radius: 1.5em;
+}
+
+object {
+    pointer-events: none;
+}
