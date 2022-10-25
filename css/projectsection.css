@@ -81,13 +81,14 @@
     display: flex;
     flex-direction: column;
     gap: 1.5em;
-    background-color: rgba(var(--modal), 0.5);
+    background-color: rgba(31, 27, 36, 0.5);
     padding: 2em;
     border-radius: 2em;
     justify-content: space-between;
 }
 
 .cta-button {
+    grid-area: 5 / 1 / 6 / 6; 
     cursor: pointer;
     justify-self: start;
     padding: 1.2em 1.6em 1.2em 1.2em;
@@ -214,6 +215,32 @@
   }
 
   @media only screen and (max-width: 480px) {
+
+    .row {
+        padding: 80px 0;
+    }
+
+    .flex-numbered-list {
+        margin: 1em 0.5em;
+    }
+
+    .content-header {
+        grid-column-gap: 0;
+        grid-row-gap: 1em;
+    }
+
+    .flex-categories > div > h4 {
+        font-size: 1.2em !important;
+    }
+
+    .header__description { 
+        grid-area: 4 / 1 / 5 / 6;
+    }
+    
+    .header__details { 
+        grid-area: 3 / 1 / 4 / 6; 
+    }
+
     .page-content {
         margin-left: 0px;
     }
@@ -224,6 +251,7 @@
 
     .page-content .img-banner {
         margin-top: 80px;
+        height: auto;
     } 
 
     .sidenav--fixed {

@@ -1,8 +1,8 @@
 /*Handles the typewriting effects for the introduction page header */
 
 const typewriterHeading = document.getElementById("intro-header");
-var typeString = "I'm Neesha!";
-var typeStringArr = ["I'm Neesha!", "I'm a designer", "I love website design"];
+var typeString = "Hi, I'm Neesha";
+var typeStringArr = ["Hi, I'm Neesha", "I like to code websites", "I'm a Photoshop wizard"];
 var typingSpeed = 100;
 var currString = 0;
 //Track the current character position for given string
