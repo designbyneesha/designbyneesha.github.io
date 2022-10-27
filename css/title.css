@@ -82,6 +82,11 @@
   flex-direction: column;
 }
 
+#aboutme-description {
+  padding-right:10em; 
+  font-size:1em;
+}
+
 .img-container { 
   flex: 1;
   display: flex;
@@ -214,6 +219,23 @@ input:checked + .slider:before {
     font-size: 17px;
   }
 
+  .title-section.about-me {
+    height: auto;
+  }
+
+  .img-container.left {
+    width: 90vw;
+  }
+
+  .title-section.about-me > .img-container.left {
+    border-radius: 0px 0px 40px 40px;
+    margin: 0 2em;
+  }
+
+  .title-section.about-me > .content-grid {
+    padding: 4em 0;
+  }
+
   .title-section {
     margin-left: 0;
     flex-direction: column;
@@ -240,6 +262,10 @@ input:checked + .slider:before {
 
   .sidenav .navbar-icon .navbar-icon__img {
     transform: none;
+  }
+
+  #aboutme-description {
+    padding-right: 0;
   }
 
   .sidenav .linkedin-icon {
