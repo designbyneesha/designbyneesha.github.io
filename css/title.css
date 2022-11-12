@@ -8,9 +8,8 @@
   display: grid;
   grid-auto-flow: column;
   grid-template-areas: 
-    "nav-icon about-me . linkedin-icon";
+    "nav-icon about-me . resume-icon linkedin-icon";
   grid-template-columns: 80px 2fr 3fr;
-  gap: 40px;
   align-items: center;
 
   /* Vertical navigation */
@@ -40,6 +39,7 @@
   font-size: 20px;
   color: var(--titleText);
   text-decoration: none;
+  padding-left: 2em;
 }
 
 .sidenav .aboutme-text:hover {
@@ -48,6 +48,7 @@
 }
 
 .sidenav .linkedin-icon {
+  background-color: #161518;
   grid-area: linkedin-icon;
   cursor: pointer;
   bottom: 0;
@@ -57,6 +58,27 @@
   padding: 0.9em;
   transform: rotate(-90deg);
 }
+
+.sidenav .resume-icon {
+  background-color: #161518;
+  grid-area: resume-icon;
+  cursor: pointer;
+  bottom: 0;
+  box-sizing: border-box;
+  width: 80px;
+  height: 80px;
+  padding: 0.9em;
+  transform: rotate(-90deg);
+}
+
+.sidenav .linkedin-icon:hover {
+  opacity: 0;
+}
+
+.sidenav .resume-icon:hover {
+  opacity: 0;
+}
+
 
 .sidenav--fixed {
   background-color: rgba(31, 27, 36, 0.3); 
@@ -212,7 +234,7 @@ input:checked + .slider:before {
     transform: none;
     width: 100vw;
     grid-template-columns: 80px 2fr 1fr;
-    grid-template-areas: "nav-icon about-me linkedin-icon";
+    grid-template-areas: "nav-icon about-me linkedin-icon resume-icon";
   }
 
   .sidenav .aboutme-text {
@@ -272,6 +294,13 @@ input:checked + .slider:before {
     transform: none;
     padding: 20px;
     justify-self: end;
+  }
+
+  .sidenav .resume-icon {
+    transform: none;
+    padding: 20px;
+    justify-self: end;
+    margin-left: -1em;
   }
   
 }
