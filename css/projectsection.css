@@ -263,7 +263,8 @@
     }
 
     .flex-categories > img {
-        width: auto;
+        width: 100%;
         align-items: flex-start;
+        height: auto;
     }
   }
